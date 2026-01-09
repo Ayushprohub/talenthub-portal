@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Job Posting Expiration Notice</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            background-color: #ffc107;
+            color: #212529;
+            padding: 20px;
+            border-radius: 8px 8px 0 0;
+            text-align: center;
+        }
+        .content {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 0 0 8px 8px;
+        }
+        .job-details {
+            background-color: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 15px 0;
+        }
+        .stat-card {
+            background-color: white;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            border: 2px solid #e9ecef;
+        }
+        .stat-number {
+            font-size: 24px;
+            font-weight: bold;
+            color: #007bff;
+        }
+        .button {
+            background-color: #28a745;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 4px;
+            display: inline-block;
+            margin: 10px 5px;
+        }
+        .button-secondary {
+            background-color: #007bff;
+        }
+        .warning-box {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        .footer {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            font-size: 12px;
+            color: #999;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>⏰ Job Posting Expiring Soon</h1>
+        <p>Your job posting expires in {{daysUntilExpiration}} day{{#unless singleDay}}s{{/unless}}</p>
+    </div>
+    
+    <div class="content">
+        <p>Dear {{employerName}},</p>
+        
+        <p>This is a reminder that your job posting is about to expire. Here are the details:</p>
+        
+        <div class="job-details">
+            <h3>{{jobTitle}}</h3>
+            <p><strong>Job ID:</strong> {{jobId}}</p>
+            <p><strong>Posted:</strong> {{postedDate}}</p>
+            <p><strong>Expires:</strong> {{expirationDate}}</p>
+            <p><strong>Status:</strong> {{jobStatus}}</p>
+        </div>
+        
+        <h3>Job Performance Summary</h3>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">{{applicationsCount}}</div>
+                <div>Applications</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">{{viewsCount}}</div>
+                <div>Views</div>
+            </div>
+        </div>
+        
+        <div class="warning-box">
+            <h4>⚠️ What happens when your job expires?</h4>
+            <ul>
+                <li>The job will no longer appear in search results</li>
+                <li>Candidates won't be able to apply</li>
+                <li>You can still access existing applications</li>
+                <li>You can extend the posting at any time</li>
+            </ul>
+        </div>
+        
+        <h3>Your Options:</h3>
+        <div style="text-align: center; margin: 20px 0;">
+            <a href="{{extendJobUrl}}" class="button">Extend Job Posting</a>
+            <a href="{{manageJobUrl}}" class="button button-secondary">Manage Job</a>
+        </div>
+        
+        {{#if hasApplications}}
+        <div style="background-color: white; padding: 15px; border-radius: 5px; margin: 15px 0;">
+            <h4>📋 Review Your Applications</h4>
+            <p>You have {{applicationsCount}} application{{#unless singleApplication}}s{{/unless}} waiting for review. Don't forget to:</p>
+            <ul>
+                <li>Review candidate profiles and cover letters</li>
+                <li>Update application statuses</li>
+                <li>Contact promising candidates</li>
+            </ul>
+            <a href="{{applicationsUrl}}" class="button button-secondary">Review Applications</a>
+        </div>
+        {{/if}}
+        
+        {{#if lowApplications}}
+        <div style="background-color: #e7f3ff; padding: 15px; border-radius: 5px; margin: 15px 0; border-left: 4px solid #007bff;">
+            <h4>💡 Tips to Attract More Candidates</h4>
+            <ul>
+                <li>Add more specific job requirements and benefits</li>
+                <li>Include salary range information</li>
+                <li>Highlight company culture and growth opportunities</li>
+                <li>Use relevant keywords in your job description</li>
+            </ul>
+        </div>
+        {{/if}}
+    </div>
+    
+    <div class="footer">
+        <p>You're receiving this email because your job posting is about to expire.</p>
+        <p>Need help? Contact our support team for assistance with your job postings.</p>
+    </div>
+</body>
+</html>

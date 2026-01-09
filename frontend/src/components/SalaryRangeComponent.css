@@ -1,0 +1,418 @@
+.salary-range-component {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.salary-range-component h3 {
+  margin: 0 0 20px 0;
+  color: #2c3e50;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.salary-range-component h4 {
+  margin: 0 0 16px 0;
+  color: #34495e;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+/* Salary Visibility Toggle */
+.salary-visibility {
+  margin-bottom: 24px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  cursor: pointer;
+  padding: 16px;
+  border: 2px solid #e1e8ed;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.checkbox-label:hover {
+  border-color: #3498db;
+  background-color: #f8f9fa;
+}
+
+.checkbox-label input[type="checkbox"] {
+  margin-right: 12px;
+  margin-top: 2px;
+  transform: scale(1.2);
+}
+
+.checkbox-label:has(input[type="checkbox"]:checked) {
+  border-color: #27ae60;
+  background-color: #eafaf1;
+}
+
+.checkbox-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkbox-text strong {
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #2c3e50;
+}
+
+.checkbox-text small {
+  color: #7f8c8d;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+/* Salary Configuration */
+.salary-configuration {
+  background: white;
+  border-radius: 8px;
+  padding: 24px;
+  border: 1px solid #e1e8ed;
+}
+
+/* Salary Inputs */
+.salary-inputs {
+  margin-bottom: 32px;
+}
+
+.salary-inputs .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 16px;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #2c3e50;
+  font-size: 14px;
+}
+
+.salary-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: 2px solid #e1e8ed;
+  border-radius: 6px;
+  background: white;
+  transition: border-color 0.2s ease;
+}
+
+.salary-input-wrapper:focus-within {
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.salary-input-wrapper.error {
+  border-color: #e74c3c;
+}
+
+.currency-symbol {
+  padding: 12px 8px 12px 12px;
+  font-weight: 600;
+  color: #7f8c8d;
+  background: #f8f9fa;
+  border-right: 1px solid #e1e8ed;
+}
+
+.salary-input-wrapper input {
+  flex: 1;
+  padding: 12px 8px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  background: transparent;
+}
+
+.salary-input-wrapper input:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+}
+
+.period-label {
+  padding: 12px 12px 12px 8px;
+  font-size: 13px;
+  color: #7f8c8d;
+  background: #f8f9fa;
+  border-left: 1px solid #e1e8ed;
+}
+
+/* Error Messages */
+.error-messages {
+  margin-top: 8px;
+}
+
+.error-message {
+  display: block;
+  color: #e74c3c;
+  font-size: 13px;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+/* Range Validation */
+.range-validation {
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 6px;
+}
+
+.validation-success {
+  color: #27ae60;
+  font-weight: 500;
+  background: #eafaf1;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.validation-error {
+  color: #e74c3c;
+  font-weight: 500;
+  background: #fdf2f2;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* Salary Suggestions */
+.salary-suggestions {
+  margin-bottom: 32px;
+}
+
+.suggestions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.suggestion-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  border: 2px solid #e1e8ed;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.suggestion-button:hover:not(:disabled) {
+  border-color: #3498db;
+  background-color: #f8f9fa;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.suggestion-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.suggestion-label {
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+.suggestion-range {
+  color: #7f8c8d;
+  font-size: 13px;
+}
+
+/* Advanced Options */
+.advanced-toggle {
+  margin-bottom: 20px;
+}
+
+.toggle-advanced {
+  background: none;
+  border: none;
+  color: #3498db;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 8px 0;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.toggle-advanced:hover:not(:disabled) {
+  color: #2980b9;
+}
+
+.toggle-advanced:disabled {
+  color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.advanced-options {
+  background: #f8f9fa;
+  border: 1px solid #e1e8ed;
+  border-radius: 6px;
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+.advanced-options .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.advanced-options select {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #e1e8ed;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.advanced-options select:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.advanced-options select:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+}
+
+.negotiable-option {
+  margin-top: 16px;
+}
+
+.negotiable-option .checkbox-label {
+  background: white;
+  border: 1px solid #e1e8ed;
+}
+
+/* Additional Compensation */
+.additional-compensation {
+  margin-bottom: 24px;
+}
+
+.benefits-note {
+  background: #e8f4f8;
+  border: 1px solid #bee5eb;
+  border-radius: 6px;
+  padding: 16px;
+}
+
+.benefits-note small {
+  color: #0c5460;
+  line-height: 1.5;
+  display: block;
+}
+
+/* Privacy Notice */
+.privacy-notice {
+  background: #fff3cd;
+  border: 1px solid #ffeaa7;
+  border-radius: 6px;
+  padding: 12px;
+}
+
+.privacy-notice small {
+  color: #856404;
+  line-height: 1.4;
+  display: block;
+}
+
+/* Salary Hidden State */
+.salary-hidden-state {
+  background: white;
+  border: 2px dashed #e1e8ed;
+  border-radius: 8px;
+  padding: 32px;
+  text-align: center;
+}
+
+.hidden-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.hidden-message .icon {
+  font-size: 24px;
+}
+
+.hidden-message div {
+  text-align: left;
+}
+
+.hidden-message strong {
+  display: block;
+  color: #2c3e50;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.hidden-message small {
+  color: #7f8c8d;
+  font-size: 13px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .salary-inputs .form-row {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .advanced-options .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .suggestions-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .hidden-message {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .hidden-message div {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .salary-range-component {
+    padding: 16px;
+  }
+  
+  .salary-configuration {
+    padding: 16px;
+  }
+  
+  .checkbox-label {
+    padding: 12px;
+  }
+  
+  .suggestion-button {
+    padding: 12px;
+  }
+}

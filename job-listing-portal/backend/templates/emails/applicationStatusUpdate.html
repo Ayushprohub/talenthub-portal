@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Application Status Update</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            padding: 20px;
+            border-radius: 8px 8px 0 0;
+            text-align: center;
+        }
+        .header.reviewed { background-color: #17a2b8; color: white; }
+        .header.shortlisted { background-color: #28a745; color: white; }
+        .header.rejected { background-color: #dc3545; color: white; }
+        .header.hired { background-color: #ffc107; color: #212529; }
+        
+        .content {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 0 0 8px 8px;
+        }
+        .job-details {
+            background-color: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        .status-badge {
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 12px;
+            display: inline-block;
+            margin: 10px 0;
+        }
+        .status-reviewed { background-color: #d1ecf1; color: #0c5460; }
+        .status-shortlisted { background-color: #d4edda; color: #155724; }
+        .status-rejected { background-color: #f8d7da; color: #721c24; }
+        .status-hired { background-color: #fff3cd; color: #856404; }
+        
+        .button {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 4px;
+            display: inline-block;
+            margin: 10px 5px;
+        }
+        .footer {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            font-size: 12px;
+            color: #999;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="header {{statusClass}}">
+        <h1>Application Status Update</h1>
+        <p>{{statusMessage}}</p>
+    </div>
+    
+    <div class="content">
+        <p>Dear {{applicantName}},</p>
+        
+        <p>We have an update regarding your application:</p>
+        
+        <div class="job-details">
+            <h3>{{jobTitle}}</h3>
+            <p><strong>Company:</strong> {{companyName}}</p>
+            <p><strong>Application ID:</strong> {{applicationId}}</p>
+            <p><strong>Applied:</strong> {{applicationDate}}</p>
+            
+            <div>
+                <strong>Current Status:</strong>
+                <span class="status-badge status-{{status}}">{{statusText}}</span>
+            </div>
+        </div>
+        
+        {{#if employerMessage}}
+        <div style="background-color: white; padding: 15px; border-radius: 5px; margin: 15px 0; border-left: 4px solid #007bff;">
+            <h4>Message from Employer:</h4>
+            <p>{{employerMessage}}</p>
+        </div>
+        {{/if}}
+        
+        {{#if nextSteps}}
+        <h3>Next Steps:</h3>
+        <div style="background-color: white; padding: 15px; border-radius: 5px;">
+            {{{nextSteps}}}
+        </div>
+        {{/if}}
+        
+        <div style="text-align: center; margin: 20px 0;">
+            <a href="{{applicationUrl}}" class="button">View Application Details</a>
+            {{#if showJobSearch}}
+            <a href="{{jobSearchUrl}}" class="button" style="background-color: #28a745;">Find More Jobs</a>
+            {{/if}}
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p>You're receiving this email because your job application status has been updated.</p>
+        <p>If you have any questions, please contact the employer directly or our support team.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,375 @@
+.location-management {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.location-management h3 {
+  margin: 0 0 20px 0;
+  color: #2c3e50;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.location-management h4 {
+  margin: 0 0 16px 0;
+  color: #34495e;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+/* Primary Location Styles */
+.primary-location {
+  margin-bottom: 32px;
+}
+
+.location-inputs .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.location-field {
+  position: relative;
+}
+
+.input-with-suggestions {
+  position: relative;
+}
+
+.input-with-suggestions input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #e1e8ed;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+}
+
+.input-with-suggestions input:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.input-with-suggestions input.error {
+  border-color: #e74c3c;
+}
+
+.input-with-suggestions input:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+}
+
+/* Suggestions Dropdown */
+.suggestions-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #e1e8ed;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.suggestion-item {
+  padding: 12px;
+  cursor: pointer;
+  border-bottom: 1px solid #f1f3f4;
+  transition: background-color 0.2s ease;
+}
+
+.suggestion-item:hover {
+  background-color: #f8f9fa;
+}
+
+.suggestion-item:last-child {
+  border-bottom: none;
+}
+
+/* Location Validation */
+.location-validation {
+  margin-top: 8px;
+}
+
+.validation-success {
+  color: #27ae60;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.validation-warning {
+  color: #f39c12;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Work Arrangement Styles */
+.work-arrangement {
+  margin-bottom: 32px;
+}
+
+.arrangement-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.radio-option {
+  display: flex;
+  align-items: flex-start;
+  padding: 16px;
+  border: 2px solid #e1e8ed;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.radio-option:hover {
+  border-color: #3498db;
+  background-color: #f8f9fa;
+}
+
+.radio-option input[type="radio"] {
+  margin-right: 12px;
+  margin-top: 2px;
+}
+
+.radio-option input[type="radio"]:checked + .radio-label {
+  color: #3498db;
+}
+
+.radio-option:has(input[type="radio"]:checked) {
+  border-color: #3498db;
+  background-color: #ebf3fd;
+}
+
+.radio-label {
+  display: flex;
+  flex-direction: column;
+}
+
+.radio-label strong {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.radio-label small {
+  color: #7f8c8d;
+  font-size: 13px;
+}
+
+/* Hybrid Configuration */
+.hybrid-config {
+  background: white;
+  border: 1px solid #e1e8ed;
+  border-radius: 6px;
+  padding: 20px;
+  margin-top: 16px;
+}
+
+.hybrid-config .form-group {
+  margin-bottom: 0;
+}
+
+.hybrid-config select {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #e1e8ed;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.hybrid-config select:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.hybrid-config select.error {
+  border-color: #e74c3c;
+}
+
+/* Multiple Locations */
+.multiple-locations {
+  margin-bottom: 24px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.btn-add-location {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-add-location:hover:not(:disabled) {
+  background: #2980b9;
+}
+
+.btn-add-location:disabled {
+  background: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.additional-locations {
+  margin-top: 16px;
+}
+
+.help-text {
+  color: #7f8c8d;
+  font-size: 13px;
+  display: block;
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+.additional-location {
+  background: white;
+  border: 1px solid #e1e8ed;
+  border-radius: 6px;
+  padding: 16px;
+  margin-bottom: 12px;
+}
+
+.location-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.location-header span {
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.btn-remove-location {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-remove-location:hover:not(:disabled) {
+  background: #c0392b;
+}
+
+.btn-remove-location:disabled {
+  background: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.additional-location .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+}
+
+.additional-location input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #e1e8ed;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.additional-location input:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+.additional-location input:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+}
+
+/* International Notice */
+.international-notice {
+  background: #e8f4f8;
+  border: 1px solid #bee5eb;
+  border-radius: 6px;
+  padding: 12px;
+  margin-top: 16px;
+}
+
+.international-notice .help-text {
+  margin: 0;
+  color: #0c5460;
+}
+
+/* Form Group Styles */
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #2c3e50;
+  font-size: 14px;
+}
+
+.error-message {
+  display: block;
+  color: #e74c3c;
+  font-size: 13px;
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .location-inputs .form-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .arrangement-options {
+    grid-template-columns: 1fr;
+  }
+  
+  .additional-location .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .section-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .location-management {
+    padding: 16px;
+  }
+  
+  .radio-option {
+    padding: 12px;
+  }
+}

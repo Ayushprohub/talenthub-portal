@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Your Email - TalentHub</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            background: linear-gradient(135deg, #007bff, #0056b3);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: 300;
+        }
+        .content {
+            padding: 40px 30px;
+        }
+        .content h2 {
+            color: #333;
+            margin-top: 0;
+            font-size: 24px;
+        }
+        .company-info {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 20px 0;
+            border-left: 4px solid #007bff;
+        }
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            background: linear-gradient(135deg, #28a745, #20c997);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            margin: 25px 0;
+            font-weight: 600;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .button:hover {
+            transform: translateY(-2px);
+        }
+        .verification-link {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 6px;
+            word-break: break-all;
+            font-family: monospace;
+            font-size: 14px;
+            margin: 15px 0;
+        }
+        .warning {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            color: #856404;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+        .footer {
+            background: #f8f9fa;
+            padding: 25px;
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+            border-top: 1px solid #e9ecef;
+        }
+        .footer p {
+            margin: 5px 0;
+        }
+        .logo {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        @media (max-width: 600px) {
+            .container {
+                margin: 10px;
+                border-radius: 0;
+            }
+            .content {
+                padding: 25px 20px;
+            }
+            .header {
+                padding: 25px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">💼</div>
+            <h1>Welcome to TalentHub!</h1>
+            <p>Your gateway to connecting talent with opportunity</p>
+        </div>
+        
+        <div class="content">
+            <h2>Hello {{fullName}},</h2>
+            
+            <p>Thank you for registering as an employer on TalentHub! We're excited to have you join our community of forward-thinking companies.</p>
+            
+            <div class="company-info">
+                <strong>🏢 Company:</strong> {{companyName}}
+            </div>
+            
+            <p>To complete your registration and start posting job listings, please verify your email address by clicking the button below:</p>
+            
+            <div style="text-align: center;">
+                <a href="{{verificationUrl}}" class="button">✅ Verify Email Address</a>
+            </div>
+            
+            <p>If the button doesn't work, you can copy and paste this link into your browser:</p>
+            
+            <div class="verification-link">
+                {{verificationUrl}}
+            </div>
+            
+            <div class="warning">
+                <strong>⚠️ Important:</strong> This verification link will expire in 24 hours for security reasons. If you don't verify within this time, you'll need to request a new verification email.
+            </div>
+            
+            <p><strong>What happens after verification?</strong></p>
+            <ul>
+                <li>✨ Access to post unlimited job listings</li>
+                <li>📊 View and manage job applications</li>
+                <li>🎯 Advanced candidate filtering tools</li>
+                <li>📈 Analytics and insights dashboard</li>
+            </ul>
+            
+            <p>If you didn't create this account, please ignore this email and no further action is required.</p>
+            
+            <p>Welcome aboard!</p>
+            <p><strong>The TalentHub Team</strong></p>
+        </div>
+        
+        <div class="footer">
+            <p>© 2024 TalentHub. All rights reserved.</p>
+            <p>This is an automated email. Please do not reply to this message.</p>
+            <p>Need help? Contact us at support@talenthub.com</p>
+        </div>
+    </div>
+</body>
+</html>

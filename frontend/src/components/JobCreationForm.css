@@ -1,0 +1,477 @@
+/* Job Creation Form Styles */
+.job-creation-form {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Alert Messages */
+.alert {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.alert-icon {
+  margin-right: 8px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.alert-success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.alert-error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.alert-warning {
+  background-color: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeaa7;
+}
+
+.alert-info {
+  background-color: #d1ecf1;
+  color: #0c5460;
+  border: 1px solid #bee5eb;
+}
+
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.form-header h2 {
+  margin: 0;
+  color: #333;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.form-header .form-actions {
+  display: flex;
+  gap: 10px;
+}
+
+/* Form Sections */
+.form-section {
+  margin-bottom: 40px;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  background: #fafafa;
+}
+
+.form-section h3 {
+  margin: 0 0 20px 0;
+  color: #444;
+  font-size: 20px;
+  font-weight: 500;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+/* Form Groups */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #555;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.form-group input.error,
+.form-group select.error,
+.form-group textarea.error {
+  border-color: #dc3545;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-group small {
+  display: block;
+  margin-top: 5px;
+  color: #666;
+  font-size: 12px;
+}
+
+/* Form Rows */
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+/* Radio Groups */
+.radio-group {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-weight: normal;
+}
+
+.radio-label input[type="radio"] {
+  width: auto;
+  margin: 0;
+}
+
+/* Array Fields */
+.array-field {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.array-field input {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+/* Buttons */
+.btn-primary,
+.btn-secondary,
+.btn-add,
+.btn-remove {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: #0056b3;
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background-color: #545b62;
+  transform: translateY(-1px);
+}
+
+.btn-add {
+  background-color: #28a745;
+  color: white;
+  padding: 8px 16px;
+  font-size: 12px;
+}
+
+.btn-add:hover {
+  background-color: #218838;
+}
+
+.btn-remove {
+  background-color: #dc3545;
+  color: white;
+  padding: 8px 12px;
+  font-size: 12px;
+}
+
+.btn-remove:hover {
+  background-color: #c82333;
+}
+
+.btn-primary:disabled,
+.btn-secondary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Form Actions */
+.form-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
+  padding-top: 20px;
+  border-top: 2px solid #f0f0f0;
+  margin-top: 30px;
+}
+
+/* Error Messages */
+.error-message {
+  display: block;
+  color: #dc3545;
+  font-size: 12px;
+  margin-top: 5px;
+  font-weight: 500;
+}
+
+/* Job Preview Styles */
+.job-preview {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.preview-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.preview-header h2 {
+  margin: 0;
+  color: #333;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.job-preview-content {
+  line-height: 1.6;
+}
+
+.job-preview-content h1 {
+  margin: 0 0 15px 0;
+  color: #333;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.job-meta {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.job-meta span {
+  background: #f8f9fa;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  color: #666;
+  border: 1px solid #e9ecef;
+}
+
+.salary-info {
+  background: #e8f5e8;
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  border-left: 4px solid #28a745;
+}
+
+.job-description,
+.job-responsibilities,
+.job-qualifications,
+.job-skills {
+  margin-bottom: 25px;
+}
+
+.job-description h3,
+.job-responsibilities h3,
+.job-qualifications h3,
+.job-skills h3 {
+  margin: 0 0 15px 0;
+  color: #444;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.job-responsibilities ul,
+.job-qualifications ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.job-responsibilities li,
+.job-qualifications li {
+  margin-bottom: 8px;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-tag {
+  background: #007bff;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.application-deadline {
+  background: #fff3cd;
+  padding: 15px;
+  border-radius: 6px;
+  border-left: 4px solid #ffc107;
+  margin-top: 20px;
+}
+
+.preview-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
+  padding-top: 20px;
+  border-top: 2px solid #f0f0f0;
+  margin-top: 30px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .job-creation-form,
+  .job-preview {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  .form-header,
+  .preview-header {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .radio-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .array-field {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .form-actions,
+  .preview-actions {
+    flex-direction: column;
+  }
+
+  .job-meta {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .skills-list {
+    gap: 8px;
+  }
+}
+
+/* Loading States */
+.form-loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+/* Success States */
+.form-success {
+  background: #d4edda;
+  border: 1px solid #c3e6cb;
+  color: #155724;
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+/* Accessibility */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}
+
+.btn-primary:focus,
+.btn-secondary:focus,
+.btn-add:focus,
+.btn-remove:focus {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}
+
+/* Character Counter */
+.character-counter {
+  text-align: right;
+  font-size: 12px;
+  color: #666;
+  margin-top: 5px;
+}
+
+.character-counter.warning {
+  color: #ffc107;
+}
+
+.character-counter.error {
+  color: #dc3545;
+}

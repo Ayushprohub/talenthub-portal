@@ -1,0 +1,31 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Rocket body -->
+  <path d="M16 2L20 10L16 8L12 10L16 2Z" fill="url(#gradient)"/>
+  
+  <!-- Rocket fins -->
+  <path d="M12 10L8 14L12 12L12 10Z" fill="url(#gradient)" opacity="0.8"/>
+  <path d="M20 10L24 14L20 12L20 10Z" fill="url(#gradient)" opacity="0.8"/>
+  
+  <!-- Rocket flame -->
+  <path d="M16 8L14 12L16 14L18 12L16 8Z" fill="#ff6b6b"/>
+  <path d="M16 14L15 16L16 18L17 16L16 14Z" fill="#ff8e8e"/>
+  
+  <!-- Stars -->
+  <circle cx="6" cy="6" r="1" fill="#ffd93d"/>
+  <circle cx="26" cy="8" r="1" fill="#ffd93d"/>
+  <circle cx="4" cy="20" r="1" fill="#ffd93d"/>
+  <circle cx="28" cy="24" r="1" fill="#ffd93d"/>
+  
+  <!-- Connecting lines (representing network/hub) -->
+  <path d="M16 20L10 26M16 20L22 26M16 20L16 28" stroke="url(#gradient)" stroke-width="2" opacity="0.6"/>
+  <circle cx="10" cy="26" r="2" fill="url(#gradient)"/>
+  <circle cx="22" cy="26" r="2" fill="url(#gradient)"/>
+  <circle cx="16" cy="28" r="2" fill="url(#gradient)"/>
+</svg>
